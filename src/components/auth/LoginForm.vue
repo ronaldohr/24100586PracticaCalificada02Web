@@ -18,7 +18,14 @@
       <div class="overlay-container">
         <div class="overlay">
           <div class="overlay-panel overlay-left">
+            <img
+              class="digimon-img"
+              src="~assets/img/DigimonLogo.png"
+              alt="Digimon"
+              style="width: 180px; height: auto; margin-top: 15px;"
+            />
             <h2>Bienvenido a ListCards Digimon</h2>
+            
           </div>
         </div>
       </div>
@@ -150,8 +157,8 @@ input {
 
 button {
   border-radius: 20px;
-  border: 1px solid #2ecc71;
-  background-color: #2ecc71;
+  border: 1px solid #ff8000;
+  background-color: #ff8000;
   color: #ffffff;
   font-size: 12px;
   font-weight: bold;
@@ -173,7 +180,7 @@ button {
 }
 
 .overlay {
-  background: linear-gradient(to right, #2ecc71, #2ecc71);
+  background: linear-gradient(to right, #ff8000, #ff8000);
   background-repeat: no-repeat;
   background-size: cover;
   color: #ffffff;
