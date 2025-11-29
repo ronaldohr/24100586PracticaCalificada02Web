@@ -1,19 +1,27 @@
 <template>
   <div class="digimon-container">
     <div class="filters">
-      <input
-        v-model="searchName"
-        type="text"
-        placeholder="Buscar por nombre..."
-        class="input"
-      />
+  <div class="filter-left">
+    <input
+      v-model="searchName"
+      type="text"
+      placeholder="Buscar por nombre..."
+      class="input"
+    />
 
-      <select v-model="selectedLevel" class="input">
+    <select v-model="selectedLevel" class="input">
         <option value="">Todos los niveles</option>
         <option v-for="nivel in levels" :key="nivel" :value="nivel">
-          {{ nivel }}
+            {{ nivel }}
         </option>
-      </select>
+        </select>
+    </div>
+
+    <img 
+        class="logo-digimon"
+        src="~assets/img/DigimonLogo.png"
+        alt="Digimon Logo"
+    />
     </div>
 
     <div class="card-grid">
@@ -76,6 +84,7 @@ export default {
 </script>
 
 <style scoped>
+
 .digimon-container {
   max-width: 1250px;
   margin: auto;
@@ -84,9 +93,24 @@ export default {
 
 .filters {
   display: flex;
-  gap: 15px;
+  justify-content: space-between; /* filtros izquierda y logo derecha */
+  align-items: center;
+  width: 100%;
   margin-bottom: 20px;
 }
+
+.filter-left {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.logo-digimon {
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+}
+
 
 .input {
   padding: 10px;
